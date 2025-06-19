@@ -1,0 +1,38 @@
+body{
+ background: #24353f;
+}
+.box{
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+.w-75{
+    width: 75%;
+}
+h1{
+    color: #17a2b8;
+    font-size: 2.5rem;
+     margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+input{
+     background: #24353f !important;
+     color: aliceblue !important;
+}
+input:focus{
+      background: #24353f !important;
+     color: aliceblue !important;
+
+}
+input::placeholder{
+    
+     color: rgba(240, 248, 255, 0.5) !important;
+
+}
+
+p{
+    font-size: 1.1rem;
+}
+

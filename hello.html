@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="seif metwally">
+    <title>Login System</title>
+     <link rel="icon" href="./login.png">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+
+
+<body>
+
+<div class="container d-flex justify-content-center align-items-center my-5 ">
+<div class="box w-75 text-center p-5 my-5">
+   <h1 id="welcome"></h1>
+    <button id="logoutBtn" class="btn btn-danger mt-4">Log out</button>
+        </div>
+    </div>
+    
+ 
+
+    <script>
+   document.addEventListener('DOMContentLoaded', () => {
+  const user = JSON.parse(localStorage.getItem('loggedInUser'));
+  if (!user) {
+    window.location.href = 'index.html'; 
+    return;
+  }
+  document.getElementById('welcome').innerHTML = `welcome, ${user.name}`;
+
+  document.getElementById('logoutBtn').addEventListener('click', () => {
+    localStorage.removeItem('loggedInUser');
+    window.location.href = 'index.html';
+  });
+});
+
+  </script>
+      <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+
+</body>
+</html>
